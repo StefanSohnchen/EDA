@@ -21,17 +21,19 @@ NEI_sampling <- NEI[sample(nrow(NEI), size=5000, replace=F), ]
 
 MD <- subset(NEI, fips=='24510')
 
-# Have total emissions from PM2.5 decreased in the Baltimore City, Maryland (
+# Have total emissions from PM2.5 decreased in theÂ Baltimore City, Maryland (
 # fips == "24510") from 1999 to 2008? 
-# Use the base plotting system to make a plot answering this question.
+# Use theÂ baseÂ plotting system to make a plot answering this question.
 
-# Construct the plot and save it to a PNG file.
+# Construct the plot and save it to aÂ PNG file.
 
 png(filename='plot2.png')
 
 barplot(tapply(X=MD$Emissions, INDEX=MD$year, FUN=sum), 
 main='Total Emission in Baltimore City, MD', 
-xlab='Year', ylab=expression('PM'[2.5]))
+  xlab='Year',
+  ylab=expression('PM'[2.5]),
+  col = "lightblue3")
 
 # shut down the specified device
 
