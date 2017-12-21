@@ -23,17 +23,19 @@ Emissions <- aggregate(NEI[, 'Emissions'], by=list(NEI$year), FUN=sum)
 Emissions$PM <- round(Emissions[,2]/1000,2)
 
 # Have total emissions from PM2.5 decreased in the United States from 1999 to 2008?
-# Using the base plotting system, make a plot showing the total PM2.5 emission from all sources for 
+# Using theÂ baseÂ plotting system, make a plot showing theÂ totalÂ PM2.5 emission from all sources for 
 # each of the years 1999, 2002, 2005, and 2008.
 
-# Construct the plot and save it to a PNG file.
+# Construct the plot and save it to aÂ PNG file.
 
 png(filename='plot1.png')
 
 barplot(Emissions$PM, names.arg=Emissions$Group.1,
 
 main=expression('Total Emission of PM'[2.5]),
-xlab='Year', ylab=expression(paste('PM', ''[2.5], ' in Kilotons')))
+  xlab='Year', 
+  ylab=expression(paste('PM', ''[2.5], ' in Kilotons')),
+  col = "whitesmoke")
 
 # shut down the specified device
 
